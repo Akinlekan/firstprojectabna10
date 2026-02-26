@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1 class="title">Simple Calculator</h1>
+
+            <div class="display" id="display">
+                <div class="expression" id="expression"></div>
+                <div class="result" id="result">0</div>
+            </div>
+
+            <div class="inputs">
+                <div class="input-group">
+                    <label for="num1">First Number</label>
+                    <input type="number" id="num1" placeholder="Enter first number" step="any">
+                </div>
+                <div class="input-group">
+                    <label for="num2">Second Number</label>
+                    <input type="number" id="num2" placeholder="Enter second number" step="any">
+                </div>
+            </div>
+
+            <div class="operators">
+                <button class="btn operator-btn" data-op="+">+</button>
+                <button class="btn operator-btn" data-op="-">−</button>
+                <button class="btn operator-btn" data-op="*">×</button>
+                <button class="btn operator-btn" data-op="/">÷</button>
+            </div>
+
+            <button class="btn calculate-btn" id="calculateBtn">Calculate</button>
+            <button class="btn clear-btn" id="clearBtn">Clear</button>
+
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
